@@ -1,0 +1,20 @@
+
+#include <iostream>
+#include<cstring>
+using namespace std;  
+int main(){
+   char A [50];
+   char seq[4];
+   cout<<"Enter a string:"<<endl;
+   cin.getline(A,50);
+   cout<<"Enter a sequence of 3 characters:"<<endl;
+   cin.getline(seq,4);
+   if(strstr(A,seq)!=nullptr){
+       cout<<"the sequence"<<seq<<"is found in string."<<endl;
+   }
+  else{
+      cout<<"the sequence "<<seq<<"is not found in string."<<endl;
+  }
+    return 0;
+    
+}
