@@ -1,0 +1,35 @@
+
+#include <iostream>
+#include<string>
+using namespace std;  
+
+    struct Student{
+        string name;
+        int age;
+        char gender;
+        string branch;
+    };
+    int main(){
+int size1=100;
+Student *A=new Student[size1];
+cout<<"Enter details for"<<size1<<"students is created"<<endl;
+    A[0].name="Ram";
+    A[0].age=17;
+    A[0].gender='M';
+    A[0].branch="chemical";
+    int size2=200;
+    Student *B=new Student[size2];
+    for (int i=0;i<size1;i++){
+        B[i]=A[i];
+        
+    }
+    delete[]A;
+    A=B;
+    size1=size2;
+    cout<<"size of array is changed to"<<size1<<"students"<<endl;
+    cout<<"first student:"<<A[0].name<<","<<A[0].age<<","<<A[0].gender<<","<<A[0].branch;
+    
+ 
+    return 0;
+    
+}
